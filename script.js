@@ -227,7 +227,7 @@ $(document).ready(function(){
     $(".livro").click(function() {
       var id = $(this).attr("id")
       id = id.substring(1) - 1
-      url = 'pages/detalhes.html?id=' + ids[id]
+      url = 'detalhes.html?id=' + ids[id]
       window.location.href = url
     });
 
@@ -235,7 +235,7 @@ $(document).ready(function(){
     $("._livro").click(function() {
       var id = $(this).attr("id")
       id = id.substring(1) - 1
-      url = 'pages/detalhes.html?id=' + ids[id]
+      url = 'detalhes.html?id=' + ids[id]
       window.location.href = url
     });
 
