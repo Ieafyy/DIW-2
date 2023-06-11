@@ -21,7 +21,7 @@ $.ajax({
 })
 
 $('#seta').click(() => {
-    window.location.href = 'index.html'
+    window.location.href = '../index.html'
 })
 
 
