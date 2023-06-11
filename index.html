@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <title>Livraria W3books</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/908910519c.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="">
+    <div class="flex flex-wrap justify-between mx-10" id="header">
+        <img src="img/logo.png" alt="logo" style="max-width: 150px; height: auto;">
+        <div id="header-p1" class = "flex flex-col mt-5">
+            <p class = "mb-10">Bem vindo visitante!</p>
+            <div class="flex">            
+                <input type="text" name="" id="inp-quer" class="border border-black rounded-l-xl pl-1 w-96">
+                <p class="btn-quer border border-black rounded-r-xl pl-2 pr-5 py-2 bg-gray-500 hover:bg-gray-700 text-white"><i class="fa-solid fa-magnifying-glass mx-2"></i>Pesquisar</p>
+            </div>
+        </div>
+        <div class="ml-10" id="header-p2">
+            <div class="flex gap-6  mt-5 blue-500">
+                <a href="#" class="text-blue-700 hover:text-blue-900">Login</a>
+                <p>|</p>
+                <a href="#" class="text-blue-700 hover:text-blue-900">Sign in</a>
+                <p>|</p>
+                <a href="#" class="text-blue-700 hover:text-blue-900">Minha conta</a>
+                <p>|</p>
+                <a href="#" class="text-blue-700 hover:text-blue-900">Meus pedidos</a>
+            </div>
+            <div class="flex mt-10">
+                <div>
+                    <p>Cash on Delivery | 30 Day Return</p>
+                    <p>24/7 Customer service 999999999</p>
+                </div>
+                <div class="bg-gray-500 pt-2 pb-1 px-4 ml-4 text-center border border-black text-white hover:bg-gray-700" id="compras">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <p>Cart</p>
+                </div>
+            </div>
+        </div>
+
+        <i class="fa-solid fa-bars text-4xl mt-5" style="display: none; z-index: 999;" id="menu-celular-barra"></i>
+        <div class="bg-gray-100" id="menu-celular" style="position:fixed;z-index: 998 ; right: 0; height: 250px; width: 0; display: none;">
+            <div class="flex">
+                <div class="mt-24 bg-gray-500 pt-2 pb-1 px-4 ml-4 text-center border border-black text-white hover:bg-gray-800 inline-block" id="">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <p>Cart</p>
+                </div>
+                <input type="text" name="" id="inp-quer-1" class="ml-4 border border-black pl-1 w-7/12 mt-24">
+                <div class="btn-quer mt-24 bg-gray-500 pt-2 pb-1 px-4 text-center rounded-r-xl border border-black text-white hover:bg-gray-800 inline-block" id="">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <p>Buscar</p>
+                </div> 
+            </div>
+            <div class="ml-10" id="">
+                <div class="flex gap-6  mt-5 blue-500">
+                    <a href="#" class="text-blue-700 hover:text-blue-900">Login</a>
+                    <p>|</p>
+                    <a href="#" class="text-blue-700 hover:text-blue-900">Sign in</a>
+                    <p>|</p>
+                    <a href="#" class="text-blue-700 hover:text-blue-900">Minha conta</a>
+                    <p>|</p>
+                    <a href="#" class="text-blue-700 hover:text-blue-900">Meus pedidos</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex flex-wrap mt-10 mx-10 gap-5 place-center">
+        <div class="text-center lg:w-4/12 md:w-full sm:w-full bg-gray-200 px-10 py-5 border border-black flex flex-col">
+            <strong class="">Busca rápida</strong>
+            <p class="mt-2">Encontre o produto que deseja!</p>
+            <select name="Categorias" class="mt-5 border border-black py-2 px-2" id="selecao">
+                <option value="0" selected>Todos</option>
+                <option value="1">Acessórios</option>
+                <option value="2">Bolsas</option>
+                <option value="3">Cintos</option>
+                <option value="4">Abotoaduras</option>
+                <option value="5">Óculos</option>
+                <option value="6">Chapéu</option>
+                <option value="7">Jóias</option>
+                <option value="8">Cachecóis</option>
+                <option value="9">Perfumes</option>
+                <option value="10">Lenços</option>
+                <option value="11">Acessórios para sapatos</option>
+                <option value="12">Meias</option>
+                <option value="13">Gravatas</option>
+                <option value="14">Carteiras</option>
+                <option value="15">Relógios</option>
+                <option value="16">Toucas</option>
+                <option value="17">Calças</option>
+                <option value="18">Camisetas</option>
+                <option value="19">Shorts e bermudas</option>
+                <option value="20">Vestidos Sociais</option>
+                <option value="21">Roupas masculinas</option>
+                <option value="22">Chinelos</option>
+                <option value="23">Sandálias</option>
+                <option value="24">Sapatos sociais</option>
+                <option value="25">Para presentes</option>
+                <option value="26">Produtos para banho</option>
+                <option value="27">Beleza</option>
+                <option value="28">Maquiagem para olhos</option>
+                <option value="29">Fragrâncias</option>
+                <option value="30">Tintas para cabelo</option>
+                <option value="31">Maquiagem para boca</option>
+                <option value="32">Maquiagem para pele</option>
+                <option value="33">Esmalte</option>
+                <option value="34">Perfumes femininos</option>
+                <option value="35">Bases</option>
+                <option value="36">Skincare</option>
+            </select>
+            <a class="mt-5 bg-gray-500 text-white py-4 hover:bg-gray-700" id="pesquisar"><i class="fa-solid fa-magnifying-glass mx-2"></i>Pesquisar</a>
+        </div>
+        
+        <div id="carrossel" class="w-full lg:w-7/12 flex gap-4 justify-self-center">
+            <i class="fa-solid fa-arrow-right fa-rotate-180 place-self-center hover:cursor-pointer" id="carrossel-e"></i>
+            <div class="">
+                <img src="img/imagem1.png" alt="" class="" id="img-carrossel">
+                <p class="text-center mt-5 font-bold text-3xl" id="txt-carrossel">Roupas para todas as estações!</p>
+            </div>
+            <i class="fa-solid fa-arrow-right place-self-center hover:cursor-pointer" id="carrossel-d"></i>
+        </div>
+    </div>
+
+    <div class="flex flex-wrap md:flex-nowrap mx-10 my-10 gap-10">
+        <div class="w-12/12 md:w-9/12 grid grid-cols-2 md:grid-cols-4 gap-10 justify-self-center">
+            <div class="border border-gray-500 p-2 hover:cursor-pointer flex flex-col livro" id="l1">
+                <img src="img/l1.jpg" alt="" class="img_prod">
+                <p class="title_prod">Harry Potter e a Pedra Filosofal</p>
+                <p class="estrelas"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                <p class="price_prod">R$30,99</p>
+            </div>
+            <div class="border border-gray-500 p-2 hover:cursor-pointer flex flex-col livro" id="l2">
+                <img src="img/l2.jpg" alt="" class="img_prod">
+                <p class="title_prod">Senhor dos anéis A sociedade do Anel </p>
+                <p class="estrelas"><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                <p class="price_prod">R$51,00</p>
+            </div>
+            <div class="border border-gray-500 p-2 hover:cursor-pointer flex flex-col livro" id="l3">
+                <img src="img/l3.jpg" alt="" class="img_prod">
+                <p class="title_prod">O Hobbit</p>
+                <p class="estrelas"><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                <p class="price_prod">R$44,90</p>
+            </div>
+            <div class="border border-gray-500 p-2 hover:cursor-pointer flex flex-col livro" id="l4">
+                <img src="img/l4.jpg" alt="" class="img_prod">
+                <p class="title_prod">O Sol é Para Todos</p>
+                <p class="estrelas"><i class="fa-solid fa-star  "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                <p class="price_prod">R$48,90</p>
+            </div>
+            <div class="border border-gray-500 p-2 hover:cursor-pointer flex flex-col livro" id="l5">
+                <img src="img/l5.jpg" alt="" class="img_prod">
+                <p class="title_prod">O Mito de Sísifo</p>
+                <p class="estrelas"><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                <p class="price_prod">R$17,99</p>
+            </div>
+            <div class="border border-gray-500 p-2 hover:cursor-pointer flex flex-col livro" id="l6">
+                <img src="img/l6.jpg" alt="" class="img_prod">
+                <p class="title_prod">A Divina Comédia</p>
+                <p class="estrelas"><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i></p>
+                <p class="price_prod">R$113,01</p>
+            </div>
+            <div class="border border-gray-500 p-2 hover:cursor-pointer flex flex-col livro" id="l7">
+                <img src="img/l7.jpg" alt="" class="img_prod">
+                <p class="title_prod">Guerra e Paz</p>
+                <p class="estrelas"><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i></p>
+                <p class="price_prod">R$183,90</p>
+            </div>
+            <div class="border border-gray-500 p-2 hover:cursor-pointer flex flex-col livro" id="l8">
+                <img src="img/l8.jpg" alt="" class="img_prod">
+                <p class="title_prod">1984</p>
+                <p class="estrelas"><i class="fa-solid fa-star "></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star"></i></p>
+                <p class="price_prod">R$19,60</p>
+            </div>
+            <div class="border border-gray-500 p-2 hover:cursor-pointer flex flex-col livro" id="l9">
+                <img src="img/l9.jpg" alt="" class="img_prod">
+                <p class="title_prod">Admirável Mundo Novo</p>
+                <p class="estrelas"><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i></p>
+                <p class="price_prod">R$41,00</p>
+            </div>
+            <div class="border border-gray-500 p-2 hover:cursor-pointer flex flex-col livro" id="l10">
+                <img src="img/l1.jpg" alt="" class="img_prod">
+                <p class="title_prod">Harry Potter e a Pedra Filosofal</p>
+                <p class="estrelas"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                <p class="price_prod">R$30,99</p>
+            </div>
+        </div>
+        
+        <div class="w-12/12 md:w-4/12">
+            <div class="border border-gray-500 flex flex-col p-2">
+                <p class="text-center text-2xl">Itens mais vendidos!</p>
+                <div class="mt-10 pb-5 gap-5 flex border-b-2 border-gray-400 hover:cursor-pointer _livro" id="k1">
+                    <img src="img/t1.jpg" alt="" class="w-3/12 _img_prod">
+                    <div class="flex flex-col gap-2">
+                        <p class="text-xl _title_prod">A Sutil Arte de Ligar o F*da-se</p>
+                        <p class="_estrelas"><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                        <p class="_price_prod">31,19</p>
+                    </div>
+                </div>
+                <div class="mt-10 pb-5 gap-5 flex border-b-2 border-gray-400 hover:cursor-pointer _livro" id="k2">
+                    <img src="img/t2.jpg" alt="" class="w-3/12 _img_prod">
+                    <div class="flex flex-col gap-2">
+                        <p class="text-xl _title_prod">Do mil ao milhão</p>
+                        <p class="_estrelas"><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                        <p class="_price_prod">R$24,99</p>
+                    </div>
+                </div>
+                <div class="mt-10 pb-5 gap-5 flex border-b-2 border-gray-400 hover:cursor-pointer _livro" id="k3">
+                    <img src="img/t3.jpg" alt="" class="w-3/12 _img_prod">
+                    <div class="flex flex-col gap-2 ">
+                        <p class="text-xl _title_prod">O Homem Mais Rico da Babilônia</p>
+                        <p class="_estrelas"><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                        <p class="_price_prod">R$31,90</p>
+                    </div>
+                </div>
+                <div class="mt-10 pb-5 gap-5 flex hover:cursor-pointer _livro" id="k4">
+                    <img src="img/t4.jpg" alt="" class="w-3/12 _img_prod">
+                    <div class="flex flex-col gap-2">
+                        <p class="text-xl _title_prod">O Pequeno Príncipe</p>
+                        <p class="_estrelas"><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star "></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+                        <p class="_price_prod">R$17,50</p>
+                    </div>
+                </div>
+                <p class="bg-gray-500 place-self-end inline-block px-3 py-1 mt-5 hover:bg-gray-700 text-white">Veja mais!</p>
+            </div>
+            
+            <div class="border border-gray-500 mt-10 p-5">
+                <p>Receba novos lançamentos e promoções!</p>
+                <input type="text" name="" id="" class="border border-gray-700 w-12/12 mt-10">
+                <p class="bg-gray-500 inline-block px-3 py-1 hover:bg-gray-700 text-white">Inscreva-se</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex justify-center gap-7">
+        <div id="page-e" class="page-c border border-black bg-gray-500 p-2 hover:cursor-pointer flex justify-center">
+            <i class="fa-solid text-6xl fa-arrow-right fa-rotate-180 place-self-center"></i>
+        </div>
+        <div id="page-d" class="page-c border border-black bg-gray-500 p-2 hover:cursor-pointer flex justify-center">
+            <i class="fa-solid text-6xl fa-arrow-right place-self-center"></i>
+        </div>
+    </div>
+
+    
+    <div class="mt-10 px-10 py-10 flex gap-6 flex-col md:flex-row bg-gray-300 justify-between">
+        <div class="flex flex-col">
+            <strong>Metodos de pagamento</strong>
+            <div class="flex md:grid md:grid-cols-2 mt-5 gap-2">
+                <i class="fa-brands fa-cc-mastercard text-5xl"></i>
+                <i class="fa-brands fa-cc-visa text-5xl"></i>
+                <i class="fa-brands fa-cc-paypal text-5xl"></i>
+            </div>
+        </div>
+        
+        <div class="flex flex-col">
+            <strong class="mb-5">Links úteis</strong>
+            <a href="" class="hover:underline">Ajuda</a>
+            <a href="" class="hover:underline">Politica de envio</a>
+            <a href="" class="hover:underline">Cancelamento e devolução</a>
+            <a href="" class="hover:underline">FAQ</a>
+            <a href="" class="hover:underline">Politica de privacidade</a>
+        </div>
+        
+        <div class="flex flex-col">
+            <div class="flex flex-col">
+                <strong>Redes sociais</strong>
+                <div class="flex md:grid md:grid-cols-2 mt-5 gap-2">
+                    <i class="fa-brands fa-square-facebook text-5xl hover:text-gray-800"></i>
+                    <i class="fa-brands fa-square-instagram text-5xl hover:text-gray-800"></i>
+                    <i class="fa-brands fa-square-twitter text-5xl hover:text-gray-800"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col">
+            <strong class="mb-5">Contato</strong>
+            <p>Rua XXXXXXXXXXX</p>
+            <p>NºXXX / XXXXXXX</p>
+            <p class="mt-2">XXXXXXXX@XXX.com</p>
+            <p class="mt-2">(99)99999-9999</p>
+        </div>
+    </div>
+
+    <p class="text-center bg-gray-500 py-4 text-white">2023-Raphael Silva Ramalho / Sistemas de Informação DIW PUC-MG</p>
+    
+
+</body>
+</html>

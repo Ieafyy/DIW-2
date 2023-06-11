@@ -1,0 +1,55 @@
+#compras::after{
+    content: "0";
+    position:relative;
+    color: black;
+    top: -65px;
+    right: -30px;
+    background-color: white;
+    padding: 4px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+
+#compras{
+    height: 65px;
+}
+
+img{
+    max-height: 300px;
+    width: 1000px;
+}
+
+.amarelo{
+    color: yellow;
+    -webkit-text-stroke: 1px black;
+}
+
+._amarelo{
+    color: yellow;
+    -webkit-text-stroke: 1px black;
+}
+
+.livro{
+    transition: 0.3s;
+    max-height: 450px;
+}
+
+.livro:hover{
+    transform: scale(1.1);
+}
+
+i:hover{
+    cursor: pointer;
+}
+
+.text-xl._title_prod{
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.page-c{
+    max-height: 450px;
+}
